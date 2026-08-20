@@ -1,0 +1,4 @@
+Node.js is a JavaScript runtime.
+Node.js is fast and powerful.
+Node.js is easy to learn.
+JavaScript is powerful and easy to learn.

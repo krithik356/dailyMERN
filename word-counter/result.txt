@@ -1,0 +1,8 @@
+Total words: 25
+
+Top 5 repeated words:
+is: 4
+node: 3
+js: 3
+javascript: 2
+and: 2
