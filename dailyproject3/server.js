@@ -5,7 +5,7 @@ const app = express();
 
 const PORT = 5001;
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
@@ -27,12 +27,12 @@ const users = [
     }
 ];
 
-// GET
+
 app.get("/users", (req, res) => {
     res.status(200).json(users);
 });
 
-// GET with params
+
 app.get("/users/:id", (req, res) => {
     const id = req.params.id;
 
@@ -42,7 +42,7 @@ app.get("/users/:id", (req, res) => {
     });
 });
 
-// GET with query
+
 app.get("/users", (req, res) => {
     const search = req.query.search;
 
@@ -51,7 +51,6 @@ app.get("/users", (req, res) => {
     });
 });
 
-// POST
 app.post("/users", (req, res) => {
     const { name, age } = req.body;
 
@@ -64,7 +63,7 @@ app.post("/users", (req, res) => {
     });
 });
 
-// PUT
+
 app.put("/users/:id", (req, res) => {
     const id = req.params.id;
 
@@ -74,7 +73,7 @@ app.put("/users/:id", (req, res) => {
     });
 });
 
-// DELETE
+
 app.delete("/users/:id", (req, res) => {
     const id = req.params.id;
 
