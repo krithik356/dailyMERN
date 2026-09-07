@@ -14,7 +14,7 @@ Router.post("/api/auth/register", async (req, res) => {
         // 1. Check all fields
         if (!name || !email || !password) {
             return res.status(400).json({
-                message: "Please fill all fields"
+                message: "All fields are required"
             });
         }
 
