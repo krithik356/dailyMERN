@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-
+const cors = require("cors");
 const bookRoutes = require("./routes/bookRoutes");
 
 dotenv.config();
 
 const app = express();
-
+app.use(cors());
 app.use(express.json());
 
 app.use("/api/books", bookRoutes);
@@ -22,5 +22,6 @@ mongoose
         });
     })
     .catch((error) => {
-        console.log("MongoDB connection failed:", error.message);
-    });
+    console.error("MongoDB connection failed:");
+    console.error(error);
+});

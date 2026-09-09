@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #4f4c4c;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.book-card {
+  background: rgb(225, 22, 22);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.book-card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.book-card p {
+  color: #555;
+}
+
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Reading */
+.status.reading {
+  background: #b18f1f;
+  color: #856404;
+}
+
+/* Finished */
+.status.finished {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Wishlist */
+.status.wishlist {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.message {
+  text-align: center;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .book-container {
+    grid-template-columns: 1fr;
+  }
+}
